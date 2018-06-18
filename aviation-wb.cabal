@@ -1,0 +1,69 @@
+name:               aviation-wb
+version:            0.0.1
+license:            OtherLicense
+license-file:       LICENSE
+synopsis:           Weight/Balance
+category:           Aviation
+homepage:           https://github.com/tonymorris/aviation-wb
+bug-reports:        https://github.com/tonymorris/aviation-wb/issues
+cabal-version:      >= 1.10
+build-type:         Simple
+extra-source-files: changelog
+tested-with:        GHC == 8.0.1
+
+source-repository   head
+  type:             git
+  location:         git@github.com:tonymorris/aviation-wb.git
+
+library
+  default-language:
+                    Haskell2010
+
+  build-depends:
+                    base >= 4.8 && < 5
+                    , lens >= 4.15 && < 5
+                    , diagrams-cairo >= 1.4 && < 2
+                    , diagrams-core >= 1.4 && < 2
+                    , diagrams-lib >= 1.4 && < 2
+                    , plots >= 0.1 && < 1
+                    , colour >= 2.3 && < 3
+                    , mtl >= 2.2 && < 3
+                    , hgeometry == 0.5.0.0
+
+  ghc-options:
+                    -Wall
+
+  default-extensions:
+  
+                    NoImplicitPrelude
+
+  hs-source-dirs:
+                    src
+
+  exposed-modules:
+                    Data.Aviation.Units
+                    Data.Aviation.Units.Centimetres
+                    Data.Aviation.Units.ImperialGallons
+                    Data.Aviation.Units.Inches
+                    Data.Aviation.Units.Kilograms
+                    Data.Aviation.Units.Litres
+                    Data.Aviation.Units.Pounds
+                    Data.Aviation.Units.Thouinches
+                    Data.Aviation.Units.USGallons
+                    Data.Aviation.WB
+                    Data.Aviation.WB.Arm
+                    Data.Aviation.WB.Avgas100LL
+                    Data.Aviation.WB.Moment
+                    Data.Aviation.WB.Volume
+                    Data.Aviation.WB.Weight
+                    Data.Aviation.WB.Arm.Arm
+                    Data.Aviation.WB.Arm.ArmRange
+                    Data.Aviation.WB.Arm.ArmRangeLower
+                    Data.Aviation.WB.Arm.ArmRangeUpper
+                    Data.Aviation.WB.Arm.ArmStatic
+                    Data.Aviation.C172.WB
+                    Data.Aviation.C172.WB.C172AircraftArms
+                    Data.Aviation.C172.WB.C172Arms
+                    Data.Aviation.C172.WB.C172MomentEnvelope
+                    Data.Aviation.C172.Diagrams
+
